@@ -32,3 +32,6 @@ def make_boxplot(parameter, dictio):
 
 def main(parameter, file_name):
     make_boxplot(parameter, make_dict(file_name))
+
+#Example:
+main("bandwidth","raw_data_with_factors.txt")
