@@ -1,5 +1,6 @@
 from matplotlib import pyplot as plt
 import collections
+from pylab import *
 
 def make_dict(file_name):
     values = {}
@@ -26,8 +27,13 @@ def make_boxplot(parameter, dictio):
     ax1.set_xlabel(str(parameter))
     ax1.set_ylabel('ToA')
 
-    plt.boxplot(data)
+    bp_dict = plt.boxplot(data)
     plt.xticks(range(1, len(labels) + 1), labels)
+
+    for line in bp_dict['medians']:
+        x, y = line.get_xydata()[1] # top of median line
+        text(x, y, '%.1f' % x,horizontalalignment='center')
+    
     plt.show()
 
 def main(parameter, file_name):
