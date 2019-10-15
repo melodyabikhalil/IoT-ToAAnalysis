@@ -40,5 +40,4 @@ def main(parameter, file_name):
     make_boxplot(parameter, make_dict(file_name))
 
 #Example:
-#main("bandwidth","raw_data_with_factors.txt")
-main("coding rate","CR_data.txt")
+main("Coding Rate","./CR/CR_data.txt")
