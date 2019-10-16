@@ -26,7 +26,7 @@ def get_average_dict(dictio):
             cum_sum += value
         average = cum_sum/len(dictio[key])
         x_list.append(float(key))
-        y_list.append(float(average))
+        y_list.append(float(round(average,3)))
     return x_list,y_list
 
 
@@ -36,9 +36,9 @@ def make_graph(parameter, x_list, y_list):
     ax1.set_axisbelow(True)
     ax1.set_title('Average of ToA for a variation of '+str(parameter))
     ax1.set_xlabel(str(parameter))
-    ax1.set_ylabel('ToA')
+    ax1.set_ylabel('ToA (ms)')
 
-    i=0
+    i = 0
     while(i<len(x_list)):
         plt.text(y_list[i],x_list[i], str(x_list[i]))
         i+=1
@@ -52,4 +52,4 @@ def main(parameter, file_name):
     make_graph(parameter, tuple_xy[1], tuple_xy[0])
 
 #Example:
-main("Coding Rate","./CR/CR_data.txt")
+main("Bandwidth","./BW/BW_data.txt")
