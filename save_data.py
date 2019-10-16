@@ -18,3 +18,5 @@ def save_data(path,iterations):
         i = i + 1
     ser.close()
     file.close()
+
+save_data('./SF/SF_data.txt',300)
