@@ -1,6 +1,5 @@
 from matplotlib import pyplot as plt
 import collections
-from pylab import *
 
 def make_dict(file_name):
     values = {}
