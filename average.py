@@ -37,6 +37,11 @@ def make_graph(parameter, x_list, y_list):
     ax1.set_title('Average of ToA for a variation of '+str(parameter))
     ax1.set_xlabel(str(parameter))
     ax1.set_ylabel('ToA')
+
+    i=0
+    while(i<len(x_list)):
+        plt.text(y_list[i],x_list[i], str(x_list[i]))
+        i+=1
     
     plt.plot(y_list, x_list, 'ro')
     plt.show()
